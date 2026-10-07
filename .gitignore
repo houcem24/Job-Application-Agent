@@ -1,0 +1,35 @@
+# Personal data -- never commit
+profile/candidate.md
+applications/documents/*
+!applications/documents/README.md
+applications/reports/*
+!applications/reports/.gitkeep
+applications/full time applications/manual_email_ready/*
+!applications/full time applications/manual_email_ready/.gitkeep
+
+# Generated cover letters (template and build script stay tracked)
+applications/cover_letters/*
+!applications/cover_letters/cover_letter_template.tex
+!applications/cover_letters/build_cover_letter.sh
+
+# Runtime / tool output
+applications/scripts/.work/
+applications/scripts/linkedin_search/*.json
+applications/scripts/linkedin_search/*.txt
+.playwright-mcp/
+.claude/settings.local.json
+__pycache__/
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.plain
+
+# OS
+.DS_Store
+Thumbs.db

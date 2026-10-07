@@ -1,0 +1,58 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[left=2.5cm,right=2.5cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage[parfill]{parskip}
+\newif\ifplaincoverletter
+\plaincoverletterfalse
+\IfFileExists{\jobname.plain}{\plaincoverlettertrue}{}
+\ifplaincoverletter\else
+  \usepackage{hyperref}
+  \hypersetup{colorlinks=true,urlcolor=black,linkcolor=black}
+\fi
+\newcommand{\contactlink}[2]{\ifplaincoverletter #2\else\href{#1}{#2}\fi}
+\pagestyle{empty}
+
+% ---- Candidate header: fill these in once (keep in sync with profile/candidate.md) ----
+\newcommand{\candidatename}{Your Name}
+\newcommand{\candidateaddress}{Street 1, 12345 City, Country}
+\newcommand{\candidateemail}{your.email@example.com}
+\newcommand{\candidatephone}{+00 000 0000000}
+\newcommand{\candidatelinkedin}{linkedin.com/in/your-profile}
+\newcommand{\candidategithub}{github.com/your-username}
+
+\begin{document}
+
+\begin{center}
+{\Large\bfseries \candidatename}\\[2pt]
+\candidateaddress\\
+\candidateemail ~$\diamond$~ \candidatephone ~$\diamond$~ \contactlink{https://\candidatelinkedin}{\candidatelinkedin} ~$\diamond$~ \contactlink{https://\candidategithub}{\candidategithub}
+\end{center}
+
+\vspace{1.5em}
+
+\noindent DATE
+
+\vspace{1em}
+
+\noindent COMPANY\_NAME\\
+COMPANY\_ADDRESS\_LINE1\\
+COMPANY\_ADDRESS\_LINE2
+
+\vspace{1.5em}
+
+\noindent \textbf{Re: ROLE\_TITLE}
+
+\vspace{1em}
+
+\noindent Dear Hiring Manager from COMPANY\_NAME,
+
+\vspace{1em}
+
+COVER\_LETTER\_BODY
+
+\vspace{1.5em}
+
+\noindent Best regards,\\
+\candidatename
+
+\end{document}
