@@ -54,7 +54,6 @@ The agent's behavior is defined in three files:
 │   └── candidate.example.md         # Copy to candidate.md (gitignored) and fill in
 ├── resume/
 │   ├── cv_4.tex                     # CV source (example: the author's own CV)
-│   ├── cv_4.pdf                     # Compiled example
 │   ├── resume.cls                   # LaTeX class
 │   └── build.sh                     # Builds the CV + a hyperlink-free copy for strict ATS scanners
 └── applications/
@@ -83,7 +82,7 @@ The agent's behavior is defined in three files:
 
 - [Claude Code](https://docs.claude.com/en/docs/claude-code/overview)
 - Node.js (for `npx @playwright/mcp`)
-- Python 3 with `requests`
+- Python 3 (`pip install -r requirements.txt`)
 - A LaTeX distribution with `pdflatex` (TeX Live, MacTeX, or MiKTeX)
 - Bash (Git Bash on Windows)
 - Optional: the Gmail connector in Claude, so the agent can read verification codes
@@ -93,8 +92,8 @@ The agent's behavior is defined in three files:
 1. **Clone the repo**
 
    ```bash
-   git clone https://github.com/<your-username>/job-application-ai.git
-   cd job-application-ai
+   git clone https://github.com/houcem24/job-application-agent.git
+   cd job-application-agent
    ```
 
 2. **Add the Playwright MCP server to Claude Code**
