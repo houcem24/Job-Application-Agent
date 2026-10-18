@@ -33,3 +33,6 @@ __pycache__/
 # OS
 .DS_Store
 Thumbs.db
+
+# Compiled CV (contains contact details; build locally with resume/build.sh)
+resume/*.pdf
